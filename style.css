@@ -53,13 +53,14 @@ body {
     justify-content: space-around;
     align-items: center;
 }
-#highlightHR > h2:nth-child(1){border-radius: 45px 0 0 45px;}
-#highlightHR > h2:nth-child(2){border-radius: 0 45px 45px 0;}
+#highlightHR > h2:nth-child(1){border-radius: 45px 0 0 45px}
+#highlightHR > h2:nth-child(2){border-radius: 0 45px 45px 0}
 #AC, #DEL {
     width: 50%;
     height: 100%;
     display: grid;
     place-items: center;
+    cursor: pointer;
 }
 #AC:active, #DEL:active{
     background-color: #7d5dfe;
@@ -85,15 +86,36 @@ body {
     border-radius: 50%;
     display: grid;
     place-items: center;
+    cursor: pointer;
 }
-.btns:active {
-    box-shadow: 0 5px 8px rgba(0, 0, 0, .25);
-}
+.btns:active {box-shadow: 0 5px 8px rgba(0, 0, 0, .25)}
 #SBMT {
     height: 70px;
     width: 70px;
     background-color: #9176ff;
 }
-#SBMT:active {
-    background-color: #6d50e3;
+#SBMT:active {background-color: #6d50e3}
+#secEntry {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: end;
+    font-size: 1em;
+    word-wrap: anywhere;
+    text-align: end;
+    padding: 15px;
+    padding-top: 25px;
+    overflow-x: auto;
+    color: #b19eff;
+}
+#primEntry {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: end;
+    font-size: 2.3em;
+    padding: 15px;
+    text-align: end;
+    overflow-y: auto;
+    word-wrap: anywhere;
 }
