@@ -20,21 +20,80 @@ body {
     max-width: 414px;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 #display {
-    height: 30%;
+    height: 25%;
     background-color: #201d2b;
+    min-height: 165px;
 }
 #controls {
     height: 70%;
     display: grid;
-    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+    grid-template-areas: "H H H V"
+                         "1 2 3 V"
+                         "4 5 6 V"
+                         "7 8 9 V"
+                         ". 0 . V";
+    grid-template-columns: repeat(4, minmax(85px, 1fr));
+    grid-template-rows: repeat(5, minmax(95px, 1fr));
+    place-items: center;
+    margin-top: 5%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+#highlightHR {
+    grid-area: H;
+    background-color: #f2f2f2;
+    width: 80%;
+    height: 60%;
+    border-radius: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#highlightHR > h2:nth-child(1){border-radius: 45px 0 0 45px;}
+#highlightHR > h2:nth-child(2){border-radius: 0 45px 45px 0;}
+#AC, #DEL {
+    width: 50%;
+    height: 100%;
+    display: grid;
     place-items: center;
 }
-#del {
-    grid-column: 3 ;
-    justify-self: start;
+#AC:active, #DEL:active{
+    background-color: #7d5dfe;
+    color: #f2f2f2;
 }
-#ac {
-    justify-self: end;
+#AC, #DEL, #DIVIDE, #MULTPLY, #SUBSTRACT, #ADD {
+    color: #333;
+}
+#highlightVR {
+    grid-area: V;
+    background-color: #f2f2f2;
+    width: 65%;
+    height: 90%;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.btns {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+.btns:active {
+    box-shadow: 0 5px 8px rgba(0, 0, 0, .25);
+}
+#SBMT {
+    height: 70px;
+    width: 70px;
+    background-color: #9176ff;
+}
+#SBMT:active {
+    background-color: #6d50e3;
 }
