@@ -53,20 +53,7 @@ body {
     justify-content: space-around;
     align-items: center;
 }
-#highlightHR > h2:nth-child(1){border-radius: 45px 0 0 45px}
-#highlightHR > h2:nth-child(2){border-radius: 0 45px 45px 0}
-#AC, #DEL {
-    width: 50%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-}
-#AC:active, #DEL:active{
-    background-color: #7d5dfe;
-    color: #f2f2f2;
-}
-#AC, #DEL, #DIVIDE, #MULTPLY, #SUBSTRACT, #ADD {
+#AC, #DEL, #DIVIDE, #MULTPLY, #SUBSTRACT, #ADD, .parentheses {
     color: #333;
 }
 #highlightVR {
