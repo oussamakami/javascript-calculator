@@ -2,8 +2,8 @@ window.addEventListener('load', assignActionsToBtns);
 
 function assignActionsToBtns() {
     assignActionsToDigitsBtns();
+    assignActionsToOperatorsBtns();
 
-    
     //manually assigning actions to some buttons
     selectItem("AC").addEventListener("click", deleteAll);
     selectItem("DEL").addEventListener("click", deleteLastChar);
@@ -40,10 +40,25 @@ function pushNumber(num) {
         primEntry.innerHTML += num;
     }
 }
+function pushOperator(operator) {
+    let operators = ['.', '+', '-' ,'x', '÷'];
+        primaryEntryLastChar = primEntry.innerHTML[primEntry.innerHTML.length -1];
+    if (operators.indexOf(primaryEntryLastChar) == -1){
+        primEntry.innerHTML += operator;
+    }
+}
+
+
 function assignActionsToDigitsBtns() {
     let numbersBtns = Object.values(document.getElementsByClassName('num'));
 
-    numbersBtns.forEach((val) => {
+    numbersBtns.forEach(val => {
         val.addEventListener("click", () => pushNumber(val.innerHTML));
+    });
+}
+function assignActionsToOperatorsBtns() {
+    let operatorsBtns = Object.values(document.getElementsByClassName("operators"));
+    operatorsBtns.forEach(val => {
+        val.addEventListener("click", () => pushOperator(val.innerHTML));
     });
 }
