@@ -8,6 +8,7 @@ function assignActionsToBtns() {
     selectItem("AC").addEventListener("click", deleteAll);
     selectItem("DEL").addEventListener("click", deleteLastChar);
     selectItem("dbl0").addEventListener("click", () => { pushNumber(0); pushNumber(0)}); 
+    selectItem("PERIOD").addEventListener("click", pushPeriod);
 }
 
 let primEntry = selectItem("primEntry"),
@@ -47,7 +48,12 @@ function pushOperator(operator) {
         primEntry.innerHTML += operator;
     }
 }
-
+function pushPeriod() {
+    let primaryEntryLastChar = primEntry.innerHTML[primEntry.innerHTML.length -1];
+    if(primaryEntryLastChar != '.'){
+        primEntry.innerHTML += '.';
+    }
+}
 
 function assignActionsToDigitsBtns() {
     let numbersBtns = Object.values(document.getElementsByClassName('num'));
