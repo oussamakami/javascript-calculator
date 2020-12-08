@@ -53,8 +53,11 @@ body {
     justify-content: space-around;
     align-items: center;
 }
-#AC, #DEL, #DIVIDE, #MULTPLY, #SUBSTRACT, #ADD, .parentheses {
+#AC, #DEL, .parentheses, .operators {
     color: #333;
+}
+.period {
+    color: #f2f2f2;
 }
 #highlightVR {
     grid-area: V;
