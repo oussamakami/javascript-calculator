@@ -87,7 +87,6 @@ body {
     height: 50%;
     display: flex;
     justify-content: end;
-    font-size: 1em;
     word-wrap: anywhere;
     text-align: end;
     padding: 15px;
