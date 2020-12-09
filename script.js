@@ -44,10 +44,15 @@ function pushNumber(num) {
     }
 }
 function pushOperator(operator) {
-    let operators = ['.', '+', '-' ,'x', '÷'];
-        primaryEntryLastChar = primEntry.innerHTML[primEntry.innerHTML.length -1];
+    let operators = ['.', '+', '-' ,'x', '÷'],
+        primEntryLength = primEntry.innerHTML.length,
+        primaryEntryLastChar = primEntry.innerHTML[primEntryLength -1];
     if (operators.indexOf(primaryEntryLastChar) == -1){
-        primEntry.innerHTML += operator;
+        if (primEntryLength == 1 && primaryEntryLastChar == 0 && ['+', '-'].indexOf(operator) != -1){
+            primEntry.innerHTML = operator;
+        }else {
+            primEntry.innerHTML += operator;
+        }
     }
 }
 function pushPeriod() {
