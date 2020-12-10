@@ -89,10 +89,7 @@ body {
 #secEntry {
     width: 100%;
     height: 50%;
-    display: flex;
-    justify-content: end;
     word-wrap: anywhere;
-    text-align: end;
     padding: 15px;
     padding-top: 25px;
     overflow-x: auto;
@@ -101,11 +98,8 @@ body {
 #primEntry {
     width: 100%;
     height: 50%;
-    display: flex;
-    justify-content: end;
     font-size: 2.3em;
     padding: 15px;
-    text-align: end;
     overflow-y: auto;
     word-wrap: anywhere;
 }
