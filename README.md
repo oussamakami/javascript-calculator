@@ -10,6 +10,7 @@ that's how it looks on mobiles displays
 * vanilla **HTML**
 * vanilla **CSS**
 * vanilla **JavaScript**
+* Progressive web app (**PWA**)
 # License
 This Project Is Licensed Under **WTFPL**
 
