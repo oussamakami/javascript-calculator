@@ -1,4 +1,7 @@
-window.addEventListener('load', assignActionsToBtns);
+window.addEventListener('load', () => {
+    assignActionsToBtns();
+    registerServiceWorker();
+});
 
 function assignActionsToBtns() {
     assignActionsToDigitsBtns();
@@ -109,4 +112,13 @@ function assignActionsToOperatorsBtns() {
 function assignActionsToParenthesesBtns() {
     selectItem("openParentheses").addEventListener("click", () => pushParentheses("open"));
     selectItem("closeParentheses").addEventListener("click", () => pushParentheses("close"));
+}
+async function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+      try {
+        await navigator.serviceWorker.register('./sw.js');
+      } catch (error) {
+        console.log(`serviceWorker registration failed - ${error}`);
+      }
+    }
 }
