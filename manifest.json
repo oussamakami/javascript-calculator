@@ -1,6 +1,6 @@
 {
   "name": "calculator",
-  "short_name": "calc",
+  "short_name": "calculator",
   "icons": [
     {
       "src": "./imgs/icon-192x192.png",
