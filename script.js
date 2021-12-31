@@ -25,11 +25,15 @@ function selectItem(id) {
 function deleteAll() {
     primEntry.innerHTML = 0;
     secEntry.innerHTML = '';
+    allowCloseParentheses = 0;
 }
 function deleteLastChar() {
     let primEntryTxt = primEntry.innerHTML,
         primEntryLength = primEntryTxt.length;
-
+    
+    if(primEntryTxt[primEntryLength-1] == "("){
+        allowCloseParentheses--;
+    }
     primEntry.innerHTML = primEntryTxt.slice(0, -1);
 
     if (primEntryLength == 1) {
